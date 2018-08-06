@@ -88,7 +88,7 @@ put them in your server's root (`/var/www`).
 Then, you can setup a Cron job to call this script periodically. Basically, you
 can call:
 
-    $ sudo cron -e
+    $ sudo crontab -e
 
 And then add a line to the file that looks like this:
 
@@ -97,7 +97,8 @@ And then add a line to the file that looks like this:
 ```
 
 From then on, the script `refresh-images.sh` will be called every hour, and
-regenerate the images in `/var/www`.
+regenerate the images in `/var/www`. (Solution taken from
+[here](https://askubuntu.com/a/528820/841124)).
 
 These static images can be referred to using a plain URL, such as
 `http://example.com/repo1.svg`.
